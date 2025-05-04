@@ -1,0 +1,44 @@
+This is an ATM Menu Simulator program  which was designed as part of my "30-Day Python Challenge." 
+
+Functionalities of Functions
+1. show_intro(): The program begins by welcoming the user and introducing the topic of control flow in Python.
+
+2. Balance: This is a global level declaration of balance variable which is 1000/- and it is also a initial balance of account user.
+
+3. display_menu(): Displays the available menu options where a user can perform several operations on his/her bank account.
+
+4. check_balance(): Displays the current balance of the user account with two floating values.
+
+5. deposit(): Allows user to deposit the amount in their account and validating it.
+
+6. withdraw(): Permits the user to withdraw money. It ensures that the requested amount is +ve and does not exceed the available balance.
+
+Main Function:
+   - The main() function first calls the show_intro() function for welcome message.
+   - It enters into a while loop to continually display the ATM menu and process user choices until the user decides to exit.
+   - The program uses a match-case statement to handle user input:
+     - Case 1: Calls check_balance() to show the current balance in user's account.
+     - Case 2: Calls deposit() to deposit the amount into the account.
+     - Case 3: Calls withdraw() to withdraw amount from the account.
+     - Case 4: Prints a exit message and breaks out of the loop and ending of the program.
+     - Default case (case _:): Handles invalid inputs by alerting the user for an invalid choice.
+
+5. Execution:
+   - The if __name__ == "__main__": block ensures that `main()` is called only if this program is run as a standalone program, 
+     not when imported as a module in another script.
+
+Key Features:
+- Control Flow: Demonstrates decision-making using conditional statements (if, elif, else) and loops (while loop).
+- User Input Handling: Utilizes input() to take input and uses exception-handling to handle errors in runtime.
+- Global Variable Usage: Uses a global variable(balance) to maintain and update the account balance across different functions.
+- Python 3.10+ Feature: The match-case statement provides a clean and readable way to handle multiple conditions 
+  based on user input.(another way is by using if-elif-else)
+
+What I've learnt:
+- Control flow: The controlflow of program is controlled by conditional statements and loops, 
+  i.e for with range, while, nested loops, if, if-else, if-elif...else, nested if-elif...else, match-case, break, continue and pass.
+- f-strings: It is a formated string literals which are used to embed expressions, variables to display on screen. These are prefixed with "f"
+  and uses { } as placeholders for expressions and variables. f string stands for formatted string literals.
+- Docstring: docstring is used to provide an explanation of what the code does, its parameters, and its return values, among other things, 
+  to make it easier for developers to understand how to use and maintain the code. It is represented in """ """ / ''' ''', and can be accessble
+  by __doc__ with the function name specified before it i.e deposit.__doc__. The docstring stands for documentation string.
